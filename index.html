@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lead. — Leadership Hiring Consulting & Advisory</title>
-  <meta name="description" content="We redefine the future of Leadership Hiring. Expert Executive Search, stakeholder management, and candidate experience consulting.">
+  <title>Lead. — Hiring Consulting & Advisory</title>
+  <meta name="description" content="We redefine the future of Hiring. From executive search to corporate team building and high-volume recruitment — Lead. delivers.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -166,10 +166,10 @@
     }
 
     .services-grid {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 28px;
       align-items: start;
     }
@@ -248,6 +248,17 @@
     .card-purple .divider {
       background: rgba(255,255,255,0.2);
     }
+
+    .card-dark {
+      background: var(--black);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.25);
+    }
+
+    .card-dark h2 { color: var(--purple-light); }
+    .card-dark p { color: rgba(255,255,255,0.82); }
+    .card-dark .divider { background: rgba(255,255,255,0.1); }
+    .card-dark .checklist li { color: rgba(255,255,255,0.82); }
+    .card-dark .checklist li::before { color: var(--purple-light); }
 
     /* ── CTA BAND ── */
     .cta-band {
@@ -334,6 +345,10 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .hero { padding: 72px 24px 64px; }
@@ -369,9 +384,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-eyebrow">Leadership Hiring</span>
+      <span class="hero-eyebrow">Hiring Consulting & Advisory</span>
       <h1>This is Lead.</h1>
-      <p class="hero-body">We redefine the future of Leadership Hiring. With a profound understanding of Executive Search and stakeholder management, our expertise ensures every hire adds value, optimizing your ROI. We deliver cost-efficient solutions and a seamless candidate experience that transcends industry norms.</p>
+      <p class="hero-body">We redefine the future of Hiring. Whether you're placing your next C-suite executive, scaling a corporate team, or running high-volume recruitment at speed — our expertise ensures every hire adds value, optimizing your ROI and fueling your business growth.</p>
       <p class="hero-sub">Partner with us to unlock a world of possibilities.</p>
       <a href="mailto:Thom@leadhiring.com" class="btn btn-purple">Start a conversation</a>
     </div>
@@ -381,13 +396,14 @@
   <section class="services">
     <div class="services-grid">
 
-      <!-- White card -->
+      <!-- Card 1: Leadership Hiring -->
       <div class="card card-white">
 
         <div class="service-block">
-          <h2>Advisory for Leadership Hiring</h2>
-          <p>Our seasoned team takes a holistic approach to Leadership Hiring, ensuring every candidate is not just a fit for the role but for your organization's unique culture and future goals.</p>
+          <h2>Leadership Hiring</h2>
+          <p>We take a holistic approach to executive search, ensuring every leader is not just a fit for the role but for your organization's unique culture and long-term ambitions.</p>
           <ul class="checklist">
+            <li>Executive search & headhunting</li>
             <li>Thorough candidate assessments</li>
             <li>Customized interview strategies</li>
             <li>Onboarding support for seamless integration</li>
@@ -399,38 +415,76 @@
 
         <div class="service-block">
           <h2>Candidate Experience</h2>
-          <p>We prioritize the candidate experience, delivering a seamless and positive journey that reflects your company's values and reputation. A great candidate experience not only attracts the best talent but also nurtures your employer brand.</p>
+          <p>We deliver a seamless, positive candidate journey that reflects your company's values. A great experience doesn't just attract top talent — it nurtures your employer brand.</p>
         </div>
 
         <div class="divider"></div>
 
         <div class="service-block">
           <h2>Executive Stakeholder Management</h2>
-          <p>We understand the importance of managing the expectations and needs of executive stakeholders. Our advisory services encompass effective communication and engagement with key decision-makers, ensuring alignment throughout the hiring process.</p>
+          <p>We manage the expectations of executive stakeholders through effective communication with key decision-makers, ensuring full alignment throughout the hiring process.</p>
         </div>
 
       </div>
 
-      <!-- Purple card -->
+      <!-- Card 2: Corporate Hiring -->
       <div class="card card-purple">
 
         <div class="service-block">
-          <h2>Data-Driven Insights</h2>
-          <p>Leveraging data, we provide you with actionable insights that empower you to make data-driven decisions throughout the leadership hiring process, ensuring optimal results.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="service-block">
-          <h2>Systems Excellence</h2>
-          <p>Our commitment to Systems Excellence ensures that your leadership hiring process is streamlined, efficient, and data-driven, providing you with real-time insights and analytics to make informed decisions.</p>
+          <h2>Corporate Hiring</h2>
+          <p>From department leads to specialist roles, we help you build high-performing corporate teams that are aligned with your culture, values, and business goals.</p>
+          <ul class="checklist" style="color:rgba(255,255,255,0.9);">
+            <li>Role definition & benchmarking</li>
+            <li>Structured, multi-stage interview design</li>
+            <li>Culture & values alignment</li>
+            <li>Offer management & negotiation</li>
+            <li>90-day success tracking</li>
+          </ul>
         </div>
 
         <div class="divider"></div>
 
         <div class="service-block">
           <h2>Global Talent Mapping</h2>
-          <p>Our global reach enables us to identify and assess leadership talent on a global scale, helping you expand your horizons and find the best leaders no matter where they are located.</p>
+          <p>Our global reach enables us to identify and assess talent on an international scale — helping you expand your horizons and find the best people no matter where they are.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Data-Driven Insights</h2>
+          <p>We provide actionable insights that empower you to make confident, data-backed decisions throughout the hiring process — ensuring optimal results every time.</p>
+        </div>
+
+      </div>
+
+      <!-- Card 3: High Volume Recruitment -->
+      <div class="card card-dark">
+
+        <div class="service-block">
+          <h2>High Volume Recruitment</h2>
+          <p>When speed and scale matter, we design and run automated recruitment processes that maintain quality without sacrificing efficiency — so you can hire hundreds without losing your edge.</p>
+          <ul class="checklist">
+            <li>End-to-end recruitment automation</li>
+            <li>ATS setup, configuration & optimisation</li>
+            <li>Automated screening & shortlisting workflows</li>
+            <li>Real-time hiring dashboards & reporting</li>
+            <li>Scalable process design that grows with you</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Systems Excellence</h2>
+          <p>We streamline your recruitment tech stack — connecting your ATS, job boards, and communication tools into one efficient system with real-time insights baked in.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Process Advisory</h2>
+          <p>We audit your current recruitment process, identify bottlenecks, and implement structured workflows that cut time-to-hire while improving the quality of every candidate interaction.</p>
         </div>
 
       </div>
@@ -440,7 +494,7 @@
 
   <!-- CTA BAND -->
   <section class="cta-band">
-    <h2>Elevate your Leadership Hiring<br>strategy to new heights</h2>
+    <h2>Elevate your Hiring strategy<br>to new heights</h2>
     <p>Let's build something extraordinary together.</p>
     <a href="mailto:Thom@leadhiring.com" class="btn btn-dark">Get in touch</a>
   </section>
@@ -452,7 +506,7 @@
       <div class="logo-sub">Consulting &amp; Advisory</div>
     </a>
 
-    <p class="footer-center">© 2025 Lead. Consulting &amp; Advisory</p>
+    <p class="footer-center">© 2026 Lead. Consulting &amp; Advisory</p>
 
     <div class="footer-right">
       <a href="https://www.linkedin.com/in/thom-van-den-heuvel" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
