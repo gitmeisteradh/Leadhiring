@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead. — Leadership Hiring Consulting & Advisory</title>
+  <meta name="description" content="We redefine the future of Leadership Hiring. Expert Executive Search, stakeholder management, and candidate experience consulting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #6B46FF;
+      --purple-light: #D4CAFF;
+      --yellow: #FDFCE8;
+      --yellow-dark: #F5F3D0;
+      --white: #ffffff;
+      --black: #0D0D0D;
+      --gray: #555;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .logo-main {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: var(--black);
+      letter-spacing: -1.5px;
+    }
+
+    .logo-main .hl {
+      background: var(--purple-light);
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+
+    .logo-sub {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--gray);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: all 0.18s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 26px;
+      font-size: 0.9rem;
+    }
+
+    .btn-dark:hover {
+      background: var(--purple);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(107,70,255,0.3);
+    }
+
+    .btn-purple {
+      background: var(--purple);
+      color: var(--white);
+      padding: 16px 36px;
+      font-size: 1rem;
+    }
+
+    .btn-purple:hover {
+      background: #5535e8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(107,70,255,0.4);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--yellow);
+      padding: 96px 48px 80px;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--purple);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900;
+      color: var(--purple);
+      letter-spacing: -3px;
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+
+    .hero-body {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--black);
+      max-width: 680px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 44px;
+    }
+
+    /* ── SERVICES ── */
+    .services {
+      background: var(--yellow);
+      padding: 0 48px 96px;
+    }
+
+    .services-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      border-radius: 28px;
+      padding: 48px 44px;
+    }
+
+    .card-white {
+      background: var(--white);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    }
+
+    .card-purple {
+      background: var(--purple);
+      box-shadow: 0 4px 40px rgba(107,70,255,0.3);
+    }
+
+    .service-block {
+      margin-bottom: 44px;
+    }
+
+    .service-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .card h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+    }
+
+    .card-white h2 { color: var(--purple); }
+    .card-purple h2 { color: var(--white); }
+
+    .card p {
+      font-size: 0.975rem;
+      font-weight: 600;
+      line-height: 1.75;
+    }
+
+    .card-white p { color: #333; }
+    .card-purple p { color: rgba(255,255,255,0.9); }
+
+    .checklist {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .checklist li {
+      font-size: 0.975rem;
+      font-weight: 600;
+      color: #333;
+      padding: 6px 0;
+      padding-left: 26px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+      font-weight: 800;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(107,70,255,0.12);
+      margin: 40px 0;
+    }
+
+    .card-purple .divider {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: var(--purple);
+      padding: 72px 48px;
+      text-align: center;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .cta-band p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 36px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0,0,0,0.07);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand .logo-main { font-size: 1.4rem; }
+
+    .footer-center {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--purple);
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.18s ease;
+    }
+
+    .footer-icon:hover {
+      background: var(--black);
+      transform: translateY(-2px);
+    }
+
+    .footer-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .footer-email {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    .footer-email:hover {
+      text-decoration: underline;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .hero { padding: 72px 24px 64px; }
+      .services { padding: 0 24px 72px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .card { padding: 40px 32px; }
+      .cta-band { padding: 56px 24px; }
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { letter-spacing: -2px; }
+      .btn-purple { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-main"><span class="hl">L</span>ead.</div>
+      <div class="logo-sub">Consulting &amp; Advisory</div>
+    </a>
+    <a href="mailto:Thom@leadhiring.com" class="btn btn-dark">Get in touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Leadership Hiring</span>
+      <h1>This is Lead.</h1>
+      <p class="hero-body">We redefine the future of Leadership Hiring. With a profound understanding of Executive Search and stakeholder management, our expertise ensures every hire adds value, optimizing your ROI. We deliver cost-efficient solutions and a seamless candidate experience that transcends industry norms.</p>
+      <p class="hero-sub">Partner with us to unlock a world of possibilities.</p>
+      <a href="mailto:Thom@leadhiring.com" class="btn btn-purple">Start a conversation</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="services-grid">
+
+      <!-- White card -->
+      <div class="card card-white">
+
+        <div class="service-block">
+          <h2>Advisory for Leadership Hiring</h2>
+          <p>Our seasoned team takes a holistic approach to Leadership Hiring, ensuring every candidate is not just a fit for the role but for your organization's unique culture and future goals.</p>
+          <ul class="checklist">
+            <li>Thorough candidate assessments</li>
+            <li>Customized interview strategies</li>
+            <li>Onboarding support for seamless integration</li>
+            <li>Post-placement follow-ups to ensure long-term success</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Candidate Experience</h2>
+          <p>We prioritize the candidate experience, delivering a seamless and positive journey that reflects your company's values and reputation. A great candidate experience not only attracts the best talent but also nurtures your employer brand.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Executive Stakeholder Management</h2>
+          <p>We understand the importance of managing the expectations and needs of executive stakeholders. Our advisory services encompass effective communication and engagement with key decision-makers, ensuring alignment throughout the hiring process.</p>
+        </div>
+
+      </div>
+
+      <!-- Purple card -->
+      <div class="card card-purple">
+
+        <div class="service-block">
+          <h2>Data-Driven Insights</h2>
+          <p>Leveraging data, we provide you with actionable insights that empower you to make data-driven decisions throughout the leadership hiring process, ensuring optimal results.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Systems Excellence</h2>
+          <p>Our commitment to Systems Excellence ensures that your leadership hiring process is streamlined, efficient, and data-driven, providing you with real-time insights and analytics to make informed decisions.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="service-block">
+          <h2>Global Talent Mapping</h2>
+          <p>Our global reach enables us to identify and assess leadership talent on a global scale, helping you expand your horizons and find the best leaders no matter where they are located.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Elevate your Leadership Hiring<br>strategy to new heights</h2>
+    <p>Let's build something extraordinary together.</p>
+    <a href="mailto:Thom@leadhiring.com" class="btn btn-dark">Get in touch</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="logo footer-brand">
+      <div class="logo-main"><span class="hl">L</span>ead.</div>
+      <div class="logo-sub">Consulting &amp; Advisory</div>
+    </a>
+
+    <p class="footer-center">© 2025 Lead. Consulting &amp; Advisory</p>
+
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/thom-van-den-heuvel" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a1.984 1.984 0 01-1.982-1.984 1.984 1.984 0 011.982-1.982 1.983 1.983 0 010 3.966zm1.984 13.019H3.352V9h3.969v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="mailto:Thom@leadhiring.com" class="footer-icon" aria-label="Email">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+      <a href="mailto:Thom@leadhiring.com" class="footer-email">Thom@leadhiring.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
